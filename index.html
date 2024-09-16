@@ -23,6 +23,11 @@
                     <li><a href="#donate">Donate</a></li>
                     <li><a href="#share">Share A Pet</a></li>
                     <li><a href="#contact">Contact us</a></li>
+                    <div class="nav-right">
+                        <li><a href="#signin">SignIn</a></li>
+                        <li><a href="#signup">SignUp</a></li>
+                    </div>
+                    
                 </ul>
             </nav>
         </div>
@@ -35,7 +40,7 @@
             Our dedicated team works tirelessly to rescue, rehabilitate, and rehome pets in need, giving them a second chance at life. We understand that pets aren't just animals—they are loyal companions, family members, and lifelong friends. For us, it's not just about finding homes, but about creating lifelong bonds between pets and their new families.
             <br>
             <br>
-            We are more than just an adoption service; we are a community united by love, care, and commitment. Through our efforts, we strive to give every pet a voice, a warm place to sleep, and a future filled with joy. Together, we can change their world and create happy endings for both pets and the families who welcome them into their hearts. At PetPals, <b>we're here to make sure every wagging tail and gentle purr finds its way home.</b>
+            We are more than just an adoption service; we are a community united by love, care, and commitment. Through our efforts, we strive to give every pet a voice, a warm place to sleep, and a future filled with joy. Together, we can change their world and create happy endings for both pets and the families who welcome them into their hearts. At PetPals, <b>we're here to make sure every whisker finds its way home.</b>
             </p>
             
         </div>
@@ -82,5 +87,23 @@
             </div>
         </div>
         <div class="footer"> <p>&copy; 2024 PetPals. All Rights Reserved.</p></div>  
+        <script>
+            let lastScrollTop = 0;
+            const navbar = document.querySelector('nav');
+
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > navbar.offsetTop) {
+                    // Scrolling down past the navbar
+                    navbar.classList.add('nav-sticky');
+                } else {
+                    // Scrolling back up before the navbar
+                    navbar.classList.remove('nav-sticky');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+        </script>
     </body>
 </html>
