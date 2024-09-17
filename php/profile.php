@@ -62,7 +62,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'signout') {
     exit();
 }
 
-// Close connection
 mysqli_close($conn);
 ?>
 
@@ -81,7 +80,7 @@ mysqli_close($conn);
         }
         .container{
             padding: 2%;
-            background-color: #c9a803;
+            background-color: #FF941D;
             max-height: 80%;
             width: 60%;
         }
@@ -105,7 +104,7 @@ mysqli_close($conn);
         }
         .link a{
             background-color: black;
-            color:#c9a803 ;
+            color:#FF941D;
             border-radius: 50px;
             padding: 10px;
             text-decoration: none;

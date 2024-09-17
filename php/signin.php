@@ -1,27 +1,23 @@
 <?php
-session_start(); // Start session to use session variables
+session_start(); 
 
-// Database credentials
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "petpals";
 
-// Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$error = ''; // Initialize error variable
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $_POST['username'];
     $pass = $_POST['password'];
 
-    // Prepare SQL to select user
     $stmt = mysqli_prepare($conn, "SELECT user_id, password, role FROM users WHERE username = ?");
     if ($stmt === false) {
         die("Prepare failed: " . mysqli_error($conn));
@@ -35,12 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_result($stmt, $user_id, $hashed_pass, $role);
         mysqli_stmt_fetch($stmt);
 
-        // Verify password
         if (password_verify($pass, $hashed_pass)) {
             $_SESSION['username'] = $user;
-            $_SESSION['role'] = $role; // Store user role in session
-            $_SESSION['user_id'] = $user_id; // Store user ID in session
-            header('Location: index.php'); // Redirect to the home page
+            $_SESSION['role'] = $role; 
+            $_SESSION['user_id'] = $user_id; 
+
+            if ($role === 'administrator') {
+                header('Location: admin.php'); 
+            } else {
+                header('Location: index.php');
+            }
             exit();
         } else {
             $error = "Invalid username or password.";
@@ -62,7 +62,7 @@ mysqli_close($conn);
     <style>
             body{
                 display: flex;
-                background-color: #c9a803;
+                background-color: #FF941D;
                 height: 100%;
             }
             img{
@@ -75,7 +75,7 @@ mysqli_close($conn);
             .container {
                 max-width: 400px;
                 margin: 6% auto;
-                padding: 20px;
+                padding: 10px;
                 border: 3px solid black;
                 border-radius: 8px;
                 background-color: white;
@@ -97,7 +97,7 @@ mysqli_close($conn);
                 margin-bottom: 10px;
             }
             form button{
-                background-color: #c9a803;
+                background-color: #FF941D;
                 color: black;
                 padding: 2%;
                 size: 30px;

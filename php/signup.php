@@ -1,20 +1,18 @@
 <?php
-session_start(); // Start session to use session variables
+session_start();
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "petpals";
 
-// Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$error = ''; // Initialize error variable
+$error = ''; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $_POST['username'];
@@ -22,13 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $role = 'user';
 
-    // Validate password
     if (strlen($pass) < 6 || !preg_match('/[0-9]/', $pass) || !preg_match('/[\W_]/', $pass)) {
         $error = "Password must be at least 6 characters long and include at least one number and one symbol.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Please provide a valid email address.";
     } else {
-        // Check if username already exists
         $stmt = mysqli_prepare($conn, "SELECT COUNT(*) FROM users WHERE username = ?");
         mysqli_stmt_bind_param($stmt, "s", $user);
         mysqli_stmt_execute($stmt);
@@ -68,7 +64,7 @@ mysqli_close($conn);
         <style>
             body{
                 display: flex;
-                background-color: #c9a803;
+                background-color: #FF941D;
                 height: 100%;
             }
             img{
@@ -80,7 +76,7 @@ mysqli_close($conn);
             .container {
                 max-width: 400px;
                 margin: 4% auto;
-                padding: 20px;
+                padding: 10px;
                 border: 3px solid black;
                 border-radius: 8px;
                 background-color: white;
@@ -105,7 +101,7 @@ mysqli_close($conn);
                 margin-bottom: 10px;
             }
             form button{
-                background-color: #c9a803;
+                background-color: #FF941D;
                 color: black;
                 padding: 2%;
                 size: 30px;

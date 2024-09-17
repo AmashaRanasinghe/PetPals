@@ -48,14 +48,14 @@ nav li a:hover{
 }
 
 .nav-right li:last-child a{
-    background-color: #c9a803;
+    background-color: #FF941D;
     color: black;
     border-radius: 50px;
 }
 
 .nav-right li:last-child a:hover{
     background-color: black;
-    color: #c9a803;
+    color: #FF941D;
 }
 
 .nav-right {
@@ -147,7 +147,7 @@ nav li a:hover{
 
 #about{
     height: 100vh;
-    background-color: #c9a803;
+    background-color: #FF941D;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +183,7 @@ nav li a:hover{
 }
 
 .services{
-    background-color: #c9a803;
+    background-color: #FF941D;
     color:black ;
     top: 0;
     left: 0;
@@ -209,11 +209,11 @@ nav li a:hover{
     width: 50%;
     height: 10%;
     background-color: white;
-    border: 2px solid #c9a803;
+    border: 2px solid #FF941D;
 }
 
 .services:hover a{
-    color: #c9a803;
+    color: #FF941D;
 }
 
 #contact{
@@ -226,11 +226,11 @@ nav li a:hover{
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center 50px;
-    background-color: #c9a803;
+    background-color: #FF941D;
 }
 
 .contact_heading{
-    background-color: #c9a803;
+    background-color: #FF941D;
     position: relative;
     text-align: center;
     padding-top: 5%;
@@ -253,7 +253,7 @@ nav li a:hover{
 
 .footer{
     background-color: #090604; 
-    color:#c9a803;
+    color:#FF941D;
     bottom: 0;
     text-align: center;
     width: 100%;
