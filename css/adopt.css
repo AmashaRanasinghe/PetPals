@@ -1,0 +1,69 @@
+body {
+    background-color: #FF941D;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+nav li {
+    list-style: none;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FF941D;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+nav li a:hover {
+    background-color: white;
+    color: black;
+}
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #FF941D;
+}
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 5px solid black;
+    margin-bottom: 5%;
+    background-color: white;
+    padding: 2%;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+.filter-container {
+    text-align: center;
+    margin: 20px;
+}
+.filter-container select {
+    font-size: 16px;
+    padding: 5px;
+}
+.filter-container input[type="submit"] {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    color: #FF941D;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+.filter-container input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}

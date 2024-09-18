@@ -14,7 +14,6 @@ $password = "";
 $dbname = "petpals";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -187,7 +186,8 @@ $conn->close();
             margin: 2%;
             padding: 5%;
             background-color: white;
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
         }
         .add-admin,.add-pet{
             display: flex;
@@ -206,19 +206,22 @@ $conn->close();
             margin: 2%;
             padding: 5%;
             background-color: white; 
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
         }
         #inquire{
             margin: 2%;
             padding: 5%;
             background-color: white;
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
         }
         #volunteer{
             margin: 2%;
             padding: 5%;
             background-color: white;
-            height: 100vh;
+            min-height: 100vh;
+            height: 100%;
         }
     </style>
 </head>

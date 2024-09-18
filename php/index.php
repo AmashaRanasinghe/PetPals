@@ -21,7 +21,6 @@ if (isset($_SESSION['username'])) {
     <head>
         <title>PetPals | Home </title>
         <link rel="stylesheet" href="../css/style.css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
         <div id="home">
@@ -37,6 +36,7 @@ if (isset($_SESSION['username'])) {
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Our Services</a></li>
                     <li><a href="#contact">Contact us</a></li>
+                    <li><a href="help.php">Help</a></li>
                     </div>
                     <div class="nav-center">
                         <li><img src="../imgs/logo.png" alt="logo"></li>
@@ -139,12 +139,6 @@ if (isset($_SESSION['username'])) {
                 <div><p>Galle Road, Bambalapitiya</p>
                     <address><a href="mailto:amapiumiranasinghe@gmail.com">petpals@gmail.com</a></address>
                     <p>Phone:011 2255441</p>
-                </div>
-                <div>
-                    <ul class="social-links">
-                        <li><a href="https://web.facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
                 </div>
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.0766999772504!2d80.38038777509355!3d5.984177094000772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae16b4b51bcf019%3A0x4446a95e6f8c1d3a!2sAnimal%20SOS%20Sri%20Lanka%20-%20Sanctuary!5e0!3m2!1sen!2slk!4v1726440255903!5m2!1sen!2slk" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -75,7 +75,7 @@ mysqli_close($conn);
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: white;
         }
         .container{
@@ -166,10 +166,7 @@ mysqli_close($conn);
                 </div>
                 <br><br><br>
                 <div class="link">
-                    <div class="back">
                         <a href="index.php">Back</a>
-                    </div>
-                    <div class="signout">
                         <a href="?action=signout">SignOut</a>
                     </div>
                 </div>
