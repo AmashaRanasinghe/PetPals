@@ -113,7 +113,7 @@ if (isset($_SESSION['username'])) {
                     
                 </div>
                 <div class="services">
-                    <a href="rescue.php">
+                    <a href="#">
                         <h3>Rescue and Rehabilitation</h3>   
                         <p>Many of our animals come from difficult backgrounds, and we believe every pet deserves a second chance. Our rescue team works around the clock to save animals from harmful situations, and our rehabilitation experts provide the care, love, and patience they need to heal—both physically and emotionally.</p>
                     </a>
@@ -126,7 +126,7 @@ if (isset($_SESSION['username'])) {
                   
                 </div>
                 <div class="services">
-                    <a href="education.php">
+                    <a href="#">
                         <h3>Pet Education and Resources</h3>    
                         <p>We provide ongoing support to adopters with resources on pet care, training tips, health advice, and more. Our goal is to help every new pet parent navigate the joys and challenges of owning a pet, ensuring that your bond with your furry companion continues to grow stronger.</p>
                     </a>

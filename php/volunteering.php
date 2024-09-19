@@ -1,4 +1,18 @@
 <?php
+    session_start();
+    
+$logged_in = false;
+$role = '';
+$user_id = $_SESSION['user_id'];
+
+if (isset($_SESSION['username'])) {
+    $logged_in = true;
+    $role = $_SESSION['role']; 
+} else {
+    header('Location: signin.php'); 
+    exit();
+}//restricting access if the user is not logged in
+
 $servername = "localhost";
 $username = "root";
 $password = "";
