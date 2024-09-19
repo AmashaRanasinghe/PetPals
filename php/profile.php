@@ -86,6 +86,7 @@ mysqli_close($conn);
             background-color: #FF941D;
             max-height: 80%;
             width: 60%;
+            position: absolute;
         }
         .content{
             text-align: center;
@@ -119,10 +120,11 @@ mysqli_close($conn);
         .top{
             position: absolute;
             top: 0;
+            z-index: 10;
         }
         .bottom{
             position: absolute;
-            bottom: 2.2%;
+            bottom: 2.6%;
         }
         </style>
         
@@ -167,7 +169,7 @@ mysqli_close($conn);
                         <button type="submit" name="change_password">Change Password</button>
                     </form>
                 </div>
-                <br><br><br>
+                <br>
                 <div class="link">
                         <a href="index.php">Back</a>
                         <a href="?action=signout">SignOut</a>
