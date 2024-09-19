@@ -33,16 +33,19 @@ $username_change_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['change_password'])) {
     $new_password = $_POST['new_password'];
-    $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
-
-    $update_query = "UPDATE users SET password = '$hashed_password' WHERE user_id = '$user_id'";
-    if (mysqli_query($conn, $update_query)) {
-        $password_change_message = "Password changed successfully.";
+    if (strlen($new_password) < 6 || !preg_match('/[0-9]/', $new_password) || !preg_match('/[\W_]/', $new_password)) {
+        $password_change_message = "Password must be at least 6 characters long, include at least one number and one symbol.";
     } else {
-        $password_change_message = "Error changing password: " . mysqli_error($conn);
+        $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
+
+        $update_query = "UPDATE users SET password = '$hashed_password' WHERE user_id = '$user_id'";
+        if (mysqli_query($conn, $update_query)) {
+            $password_change_message = "Password changed successfully.";
+        } else {
+            $password_change_message = "Error changing password: " . mysqli_error($conn);
+        }
     }
 }
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['change_username'])) {
     $new_username = $_POST['new_username'];
 
